@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "node build.js",
-    "test": "echo 'test'"
+    "test": "echo 'test'",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -20,6 +22,8 @@
   "dependencies": {
     "jstransformer-nunjucks": "^0.5.0",
     "metalsmith": "^2.3.0",
-    "metalsmith-in-place": "^4.2.0"
-  }
+    "metalsmith-in-place": "^4.2.0",
+    "snyk": "^1.316.1"
+  },
+  "snyk": true
 }
